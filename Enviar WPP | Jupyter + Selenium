@@ -35,4 +35,4 @@ for i, mensagem in enumerate(contatos_df['Mensagem']):
             nav.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[1]/div/div[2]').send_keys(Keys.ENTER)
             time.sleep(10)
     except:
-        print("Erro")
+        print("Erro no", numero)
