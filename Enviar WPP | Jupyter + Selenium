@@ -1,0 +1,38 @@
+import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+import time
+import urllib
+
+contatos_df = pd.read_excel("enviar.xlsx")
+
+nav = webdriver.Chrome()
+nav.get("https://web.whatsapp.com/")
+
+while len(nav.find_elements_by_id("side")) < 1:
+    time.sleep(1)
+    
+for i, mensagem in enumerate(contatos_df['Mensagem']):
+    pessoa = contatos_df.loc[i, "Pessoa"]
+    numero = contatos_df.loc[i, "Número"]
+    marca = contatos_df.loc[i, "Marca"]
+    texto = urllib.parse.quote(f"*{marca} informa:* \n\nOlá {pessoa}, tudo bem? \nEsperamos que sim!")
+    texto2 = urllib.parse.quote(f"{mensagem}")
+    link = f"https://web.whatsapp.com/send?phone={numero}&text={texto}"
+    link1 = f"https://web.whatsapp.com/send?phone={numero}&text={texto2}"
+    try:
+        nav.get(link)
+        while len(nav.find_elements_by_id("side")) < 1:
+            time.sleep(10)
+    
+        nav.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[1]/div/div[2]').send_keys(Keys.ENTER)
+        time.sleep(10)
+    
+        nav.get(link1)
+    
+        while len(nav.find_elements_by_id("side")) < 1:
+            time.sleep(10)   
+            nav.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[1]/div/div[2]').send_keys(Keys.ENTER)
+            time.sleep(10)
+    except:
+        print("Erro")
