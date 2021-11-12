@@ -1,0 +1,1701 @@
+import pandas as pd
+import time
+from selenium import webdriver
+from selenium.webdriver.common import keys
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options  
+
+
+arquivo = open('Prorro.txt', 'w')
+contatos_df = pd.read_excel("Prorrogação.xlsx")
+login = input(str('Insirar seu login: '))
+senha = input(str('Insira sua senha: '))
+av = "[Avaliação Virtual] 02"
+ap = "2ª"
+
+# chrome_options = Options()
+# chrome_options.add_argument("--headless") 
+# options = chrome_options
+driver = webdriver.Chrome()#chrome_options=options)
+driver.maximize_window()
+driver.get("https://kroton.platosedu.io/erp/login/auth")
+driver.find_element_by_id('usuario').send_keys(login)
+driver.find_element_by_id('password').send_keys(senha + Keys.ENTER)
+time.sleep(1)
+
+def c1():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c2():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c3():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c4():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c5():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c6():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c7():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+def c8():
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[11]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[11]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('//*[@id="dataFim"]').click()
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys(Keys.BACKSPACE) #Apagar dados
+        driver.find_element_by_xpath('//*[@id="dataFim"]').send_keys("17/12/2021" + Keys.ENTER)
+        time.sleep(1)
+        print(ide,"|", disciplina,"|", cronograma,"|", "prorrogado", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/a').click()
+        time.sleep(1)
+    except:
+        print(cronograma, "nenhuma alteração feita")
+
+for i, ide in enumerate(contatos_df['ID']):
+    driver.find_element_by_xpath('//*[@id="matriculaSearch-selectized"]').send_keys(ide) #Buscar ID
+    time.sleep(1)
+    driver.find_element_by_xpath('//*[@id="matriculaSearch-selectized"]').send_keys(Keys.ENTER) #Selecionar ID
+    time.sleep(1)
+    driver.find_element_by_xpath('/html/body/main/div/div/div/div[1]/div/a[1]').click() #Clicar em Gestão Acadêmica
+    time.sleep(1)
+    driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[7]/div/button').click() #clicar em ações
+    time.sleep(1)
+    driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[7]/div/div/a').click() #clicar em boletim
+    time.sleep(1)
+# AV Primeira disciplina
+    try:
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Primeira disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Segunda disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Segunda disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Terceira disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Terceira disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Quarta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Quarta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/button/i').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Quinta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Quinta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4][text()!="Ambientação"]')    
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Sexta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Sexta disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Setima disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Setima disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Oitava disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Oitapa disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Nona disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[4][text()!="Ambientação"]') 
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AP Nona disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[4][text()!="Ambientação"]') 
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if ap in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if ap in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[9]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Decima disciplina
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()
+        time.sleep(2)    
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[9]/div/button').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[10]/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+# AV Primeira disciplina - 2 Página
+    try:
+        driver.find_element_by_xpath('/html/body/main/div/div/h5/a').click()       
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[3]/nav/ul/li[2]/a').click() #Pagina 2
+        time.sleep(3)
+        disciplina = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[4]').text 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[4][text()!="Ambientação"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[7][text()<"70"]') 
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[9]/div/div/a[1]').click() 
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[9]/div/div/a[2]').click() 
+        time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[1]/td[3][text()!="Concluido"]')
+            if av in cronograma:
+                c1()
+        except:
+            print(disciplina,"sem ação")
+            time.sleep(1)
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[2]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c2()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[3]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c3()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[4]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c4()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[5]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c5()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[6]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c6()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[7]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c7()   
+        except:
+            print(disciplina,"sem ação")
+        try:
+            cronograma = driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[4]').text 
+            driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr[8]/td[3][text()!="Concluido"]')        
+            if av in cronograma:
+                c8()   
+        except:
+            print(disciplina,"sem ação")
+    except:
+        print(disciplina, "está aprovada", file=arquivo)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[9]/div/button/i').click()
+        time.sleep(1)
+        driver.find_element_by_xpath('/html/body/main/div/div/div/div[2]/div/table/tbody/tr/td[9]/div/div/a[2]').click()
+        time.sleep(1)
+driver.quit()
